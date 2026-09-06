@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse plugins for kuziSlicer.">
+    <title>kuziSlicer Plugin Store</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <p class="eyebrow">Community catalog</p>
+      <h1>kuziSlicer Plugin Store</h1>
+      <p>Discover engines, importers, exporters, tools, and rapid printer extensions.</p>
+    </header>
+    <main>
+      <section class="controls" aria-label="Catalog filters">
+        <label>Search <input id="search" type="search" placeholder="Name, summary, or tag"></label>
+        <label>Type <select id="type"><option value="">All plugin types</option></select></label>
+      </section>
+      <p id="status" role="status">Loading catalog…</p>
+      <section id="catalog" class="grid" aria-live="polite"></section>
+    </main>
+    <footer>Catalog code is GPL-3.0-only. Individual plugins retain their declared licenses.</footer>
+    <template id="plugin-card">
+      <article class="card">
+        <div class="card-heading"><h2></h2><span class="version"></span></div>
+        <p class="type"></p><p class="summary"></p><ul class="tags"></ul>
+        <div class="links"><a class="repository">Repository</a><a class="manifest">Manifest</a></div>
+      </article>
+    </template>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

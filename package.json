@@ -1,0 +1,17 @@
+{
+  "name": "kuzislicer-store",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public static plugin catalog for kuziSlicer",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "check": "npm run validate && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

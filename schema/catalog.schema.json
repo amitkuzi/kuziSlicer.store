@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://amitkuzi.github.io/kuziSlicer.store/schema/catalog.schema.json",
+  "title": "kuziSlicer plugin catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["catalogVersion", "updatedAt", "plugins"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "catalogVersion": { "type": "integer", "const": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/plugin" }
+    }
+  },
+  "$defs": {
+    "plugin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "version", "type", "summary", "author", "license", "repository", "manifest", "tags"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "version": { "type": "string", "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?$" },
+        "type": { "enum": ["engine", "importer", "exporter", "tool", "rapid printer extension"] },
+        "summary": { "type": "string", "minLength": 10, "maxLength": 200 },
+        "author": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "license": { "type": "string", "minLength": 1 },
+        "homepage": { "type": "string", "format": "uri" },
+        "repository": { "type": "string", "format": "uri" },
+        "manifest": { "type": "string", "format": "uri" },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+        }
+      }
+    }
+  }
+}

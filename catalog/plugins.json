@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/catalog.schema.json",
+  "catalogVersion": 1,
+  "updatedAt": "2026-09-06T00:00:00Z",
+  "plugins": [
+    {"id":"demo-engine","name":"Demo Slicing Engine","version":"0.1.0","type":"engine","summary":"Reference entry for a process-isolated slicing engine plugin.","author":"kuziSlicer contributors","license":"GPL-3.0-or-later","repository":"https://github.com/amitkuzi/kuziSlicer","manifest":"https://github.com/amitkuzi/kuziSlicer/tree/main/src/plugins/PluginHost/templates/engine-plugin","tags":["demo","slicing","starter"]},
+    {"id":"demo-importer","name":"Demo Profile Importer","version":"0.1.0","type":"importer","summary":"Reference entry for importing external printer and filament profiles.","author":"kuziSlicer contributors","license":"GPL-3.0-or-later","repository":"https://github.com/amitkuzi/kuziSlicer","manifest":"https://github.com/amitkuzi/kuziSlicer/tree/main/src/plugins/PluginHost/templates/importer-plugin","tags":["demo","profiles","starter"]},
+    {"id":"demo-exporter","name":"Demo Profile Exporter","version":"0.1.0","type":"exporter","summary":"Reference entry for exporting kuziSlicer profiles to portable JSON.","author":"kuziSlicer contributors","license":"GPL-3.0-or-later","repository":"https://github.com/amitkuzi/kuziSlicer","manifest":"https://github.com/amitkuzi/kuziSlicer/tree/main/src/plugins/PluginHost/templates/exporter-plugin","tags":["demo","profiles","starter"]},
+    {"id":"demo-tool","name":"Demo Model Tool","version":"0.1.0","type":"tool","summary":"Reference entry for an on-demand model analysis and repair tool.","author":"kuziSlicer contributors","license":"GPL-3.0-or-later","repository":"https://github.com/amitkuzi/kuziSlicer","manifest":"https://github.com/amitkuzi/kuziSlicer/tree/main/src/plugins/PluginHost/templates/tool-plugin","tags":["demo","model","starter"]},
+    {"id":"demo-rapid-printer-extension","name":"Demo Rapid Printer Extension","version":"0.1.0","type":"rapid printer extension","summary":"Reference entry for quickly adding upload and print support for a printer.","author":"kuziSlicer contributors","license":"GPL-3.0-or-later","repository":"https://github.com/amitkuzi/kuziSlicer","manifest":"https://github.com/amitkuzi/kuziSlicer/tree/main/src/printer-extensions/template","tags":["demo","printer","starter"]}
+  ]
+}
